@@ -1,19 +1,22 @@
 {
   "name": "laurentrega_3_12082021.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ohmyfood",
   "main": "index.js",
   "scripts": {
-      "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
-    },
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurent972/LaurentREGA_3_12082021.github.io.git"
   },
-  "author": "",
+  "author": "Laurent",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/laurent972/LaurentREGA_3_12082021.github.io/issues"
   },
-  "homepage": "https://github.com/laurent972/LaurentREGA_3_12082021.github.io#readme"
+  "homepage": "https://github.com/laurent972/LaurentREGA_3_12082021.github.io#readme",
+  "keywords": [
+    "Openclassroom"
+  ]
 }
