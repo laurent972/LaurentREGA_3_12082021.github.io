@@ -1,0 +1,95 @@
+.d-flex{
+    display: flex;
+    justify-content: center; 
+    &--wrap{
+        flex-wrap: wrap;
+    }
+    &--flex-column{
+        flex-direction: column;
+        @media screen and (min-width:800px) {
+            flex-direction: row;
+        }
+
+    }
+}
+
+.d-block-inline{
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.align-center{
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.m-bottom{
+    margin-bottom: $gap-fix*2;
+}
+
+.m-bottom-small{
+    margin-bottom: $gap-fix/2;
+}
+
+.p-bottom{
+    padding-bottom: $gap-fix*2;
+}
+
+.border-radius-15{
+    @include border-radius-15;
+}
+
+.border-radius-20{
+    @include border-radius-20;
+}
+
+.border-radius-30{
+    @include border-radius-30;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.bg-gray{
+    background:$bg-grey ; 
+}
+
+.bg-gray-light{
+    background:$bg-grey-lighten;
+}
+
+.button-box-shadow{
+    @include button-box-shadow;
+}
+
+.d-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5%;
+
+    @media screen and (min-width:600px) {
+        grid-template-columns: 3fr;
+    }
+}
+
+.gap-bottom{
+    padding-bottom: $gap;
+    &--sgap{
+        padding-bottom: $gap/3;
+    }
+    &-lgap{
+        padding-bottom: $gap*2;
+    }
+}
+
+.gap-top{
+    padding-top: $gap;
+    &--sgap{
+        padding-top: $gap/4;
+    }
+    &-lgap{
+        padding-top: $gap*2;
+    }
+}

@@ -5,3 +5,9 @@
         @return darken($colour, 10%);
     }
 }
+
+
+@function gap-sm($gap){ 
+    $resultat:30px;
+    @return $resultat;
+}

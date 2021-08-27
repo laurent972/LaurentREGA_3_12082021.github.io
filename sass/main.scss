@@ -5,6 +5,7 @@
 
 @import "./base/base";
 @import "./base/typography";
+@import "./base/classe";
 
 @import "./components/buttons";
 
@@ -12,14 +13,9 @@
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
+@import "./layout/footer";
 
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+@import "./pages/home";
 
 
-
-body{
-    background:red;
-}

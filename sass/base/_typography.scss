@@ -1,27 +1,88 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+%font-global{
+    font-family: $font-family-global;
+    font-size: $font-big;
+    color: $font-color;
 }
 
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 5rem;
-    font-style: italic;
+.font{
+    @extend %font-global;
+    &-xsmall{
+        @include font-xsmall;
+    }
+    &-small{
+        @include font-small;
+    }
+    &-regular{
+        @include font-regular;
+    }
+    &-medium{
+        @include font-medium;
+    }
+    &-big{
+        @include font-big;
+    }
+
+    &-w-light{
+        font-weight: $font-w-light;
+    }
+    &-w-regular{
+        font-weight: $font-w-normal;
+    }
+    &-w-medium{
+        font-weight: $font-w-medium;
+    }
+    &-w-bold{
+        font-weight: $font-w-bold;
+    }
+
+    &-icon{
+        &--small{
+            font-size: 0.95rem;
+        }
+        &--regular{
+            font-size: 1.5rem;
+        }
+        
+    }
 }
 
-textarea {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
+h1,h2,h3{
+    @extend %font-global; 
+    font-weight: $font-w-bold;
+    color:$black;
 }
 
-button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;
+
+.classh1,
+h1{
+    @include font-big;
+}
+
+.classh2,
+h2{
+    @include font-medium;
+}
+
+.classh3,
+h3{
+    @include font-regular;
+}
+
+span,
+p{
+    @include content-font-regular;
+}
+
+
+i{
+    padding:0 $gap-fix;
+}
+
+body{
+    line-height: 1;
+    @extend %font-global;
 }

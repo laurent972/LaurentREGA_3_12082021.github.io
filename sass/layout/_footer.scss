@@ -1,0 +1,17 @@
+footer{
+    padding:$gap;
+    background:lighten($black,20%);
+    color:darken($white,20%);
+    
+    ul{
+        i{
+            padding-left: 0;
+            font-size: smaller;
+    
+           
+                padding-right: 20px;
+           
+        }
+    }
+
+}

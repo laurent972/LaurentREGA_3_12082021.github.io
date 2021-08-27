@@ -1,3 +1,17 @@
-.btn {
-    @include btn
+%btn {
+    @include gradient-principal(bottom,$list);
+    display: inline-block;
+    padding: $gap-fix $gap-fix*2;
+    color:$white;
+    border-radius:50px;
+    @include content-font-button;
+    @include align-center;
+    @include button-box-shadow;
+    @include bp(md) {
+        padding: gap-sm($gap);
+        }
+}
+
+.btn{
+    @extend %btn;
 }
