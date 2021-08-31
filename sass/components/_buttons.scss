@@ -1,14 +1,19 @@
 %btn {
-    @include gradient-principal(bottom,$list);
+    @include gradient-principal(bottom,$colour-primary,$colour-secondary);
     display: inline-block;
     padding: $gap-fix $gap-fix*2;
     color:$white;
     border-radius:50px;
     @include content-font-button;
     @include align-center;
-    @include button-box-shadow;
+    @include button-box-shadow(5px,10px,$colour-shadow,50%);
     @include bp(md) {
         padding: gap-sm($gap);
+        }
+
+        &:hover{
+          
+            @include gradient-principal(bottom,$colour-primary,$colour-secondary);
         }
 }
 

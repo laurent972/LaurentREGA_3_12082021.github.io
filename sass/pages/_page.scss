@@ -1,0 +1,12 @@
+h1{
+    .page &{
+        font-family:'Shrikhand', cursive;
+        border-radius: 50px 50px 0 0;
+        padding: $gap;
+        margin-top: -50px;
+        display: block;
+        position: relative;
+        z-index: 9;
+        text-align:left;
+    }
+}

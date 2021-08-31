@@ -1,0 +1,30 @@
+.article{ 
+    background: $white; 
+    .article-bloc-img{
+        max-height: 180px;
+        position: relative;
+        .panneau{
+            display: inline-block;
+            position:absolute;
+            background: $colour-tertiaire;
+            color:darken($colour-tertiaire,40%);
+            z-index: 9;
+            right: 10px;
+            top:10px;
+            @include font-xsmall;
+            padding:$gap-fix/2;
+        }
+    }
+    .restaurant &{
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &-content{
+        padding: $gap;  
+    }
+
+}

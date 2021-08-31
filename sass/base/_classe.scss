@@ -13,6 +13,10 @@
     }
 }
 
+.img-ratio{
+    @include img-ratio;
+}
+
 .d-block-inline{
     display: inline-block;
     vertical-align:middle;
@@ -62,6 +66,10 @@
 
 .button-box-shadow{
     @include button-box-shadow;
+
+    &:hover{
+        @include button-box-shadow(5px,12px,$colour-shadow,10%);
+    }
 }
 
 .d-grid{
@@ -92,4 +100,8 @@
     &-lgap{
         padding-top: $gap*2;
     }
+}
+
+.float-right{
+    float: right;
 }

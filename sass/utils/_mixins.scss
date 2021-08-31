@@ -1,11 +1,16 @@
 
 
 @mixin img-ratio {
-    width: 100%;
-        display: block;
+ 
+        
         overflow: hidden;
-        padding-top: 56.25%;
+        // padding-top: 56.25%;
         position: relative;
+        width: 100%;
+    display: block;
+ 
+    height: 100%;
+    object-fit: cover;
         & img {
             position: absolute;
             top: 50%;
@@ -20,9 +25,9 @@
     box-shadow: 0 2px 5px 0 $colour-shadow;
 }
 
-@mixin button-box-shadow{
-    -webkit-box-shadow: 0 4px 6px 0 lighten($colour-shadow,40%);
-    box-shadow: 0 4px 6px 0 lighten($colour-shadow,40%);
+@mixin button-box-shadow($distance:4px,$blur:6px,$color:$colour-shadow,$opacity:40%){
+    -webkit-box-shadow: 0 $distance $blur 0 lighten($color,$opacity);
+    box-shadow: 0 $distance $blur 0 lighten($color,$opacity);
 }
 
 @mixin txt-center{
@@ -74,18 +79,34 @@
 }
 
 
-$list:$colour-primary,$colour-secondary;
+
 //direction: top bottom left right
-@mixin gradient-principal($direction, $list) { 
-    background: -webkit-linear-gradient($direction, $list);
-    background: -moz-linear-gradient($direction, $list);
-    background: -o-linear-gradient($direction, $list);
-    background: linear-gradient($direction, $list);  
+@mixin gradient-principal($direction:bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
+    background: -webkit-linear-gradient($direction, $color1, $color2);
+    background: -moz-linear-gradient($direction, $color1, $color2);
+    background: -o-linear-gradient($direction, $color1, $color2);
+    background: linear-gradient($direction, $color1,$color2 ); 
   }
+
+
+@mixin gradient-principal-text($direction:bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
+    background: -webkit-linear-gradient($direction, $color1, $color2);
+    background: -moz-linear-gradient($direction, $color1, $color2);
+    background: -o-linear-gradient($direction, $color1, $color2);
+    background: linear-gradient($direction, $color1,$color2 ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+
 
 @mixin align-center{
     margin: 0 auto;
     text-align: center;
+}
+
+@mixin border-radius ($radius:20px){
+    border-radius: $radius;
 }
 
 @mixin border-radius-15{

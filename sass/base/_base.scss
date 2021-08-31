@@ -41,4 +41,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   table {
     border-collapse: collapse;
-    border-spacing: 0; }
+    border-spacing: 0; 
+    tr{
+      vertical-align: middle;
+      td{
+        vertical-align: middle;
+      }
+    }
+  }
+
+    a{
+      text-decoration: none;
+      &:active{
+        color:$colour-primary;
+      }
+    }

@@ -2,16 +2,22 @@ footer{
     padding:$gap;
     background:lighten($black,20%);
     color:darken($white,20%);
+
+    i{
+        padding-left: 0;
+        font-size: smaller;
+       
+    }
     
     ul{
-        i{
-            padding-left: 0;
-            font-size: smaller;
-    
-           
-                padding-right: 20px;
-           
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            color:darken($white,20%);
+            padding-right:  5px; 
         }
+       
     }
 
 }
