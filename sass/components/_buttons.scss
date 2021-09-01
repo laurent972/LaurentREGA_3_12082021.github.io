@@ -4,6 +4,7 @@
     padding: $gap-fix $gap-fix*2;
     color:$white;
     border-radius:50px;
+    cursor: pointer;
     @include content-font-button;
     @include align-center;
     @include button-box-shadow(5px,10px,$colour-shadow,50%);
@@ -12,8 +13,8 @@
         }
 
         &:hover{
-          
-            @include gradient-principal(bottom,$colour-primary,$colour-secondary);
+            
+            @include gradient-principal(bottom,$colour-secondary,$colour-secondary);
         }
 }
 

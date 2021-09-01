@@ -1,5 +1,30 @@
+.restaurant{
+    @include bp(md){
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+        h1 {
+            width: 100%;  
+      
+           
+        }
+
+        article{
+            width: calc(25% - #{$gap-fix});
+            margin-right:$gap-fix;
+            &:last-child{
+                margin-right:0;
+            }
+        }
+    }
+
+}
+
 .article{ 
+    grid-area:article;
     background: $white; 
+  
     .article-bloc-img{
         max-height: 180px;
         position: relative;
@@ -16,6 +41,7 @@
         }
     }
     .restaurant &{
+      
         img{
             max-width: 100%;
             height: auto;

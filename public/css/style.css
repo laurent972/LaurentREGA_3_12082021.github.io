@@ -182,7 +182,7 @@ h2 span {
   position: relative;
   float: right;
   cursor: pointer;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 h1 span i,
 h3 span i,
@@ -367,6 +367,7 @@ h2 span:active .fas {
   padding: 15px 30px;
   color: #fff;
   border-radius: 50px;
+  cursor: pointer;
   font-size: 1rem;
   font-weight: 1.15rem;
   margin: 0 auto;
@@ -390,13 +391,32 @@ h2 span:active .fas {
   }
 }
 .btn:hover {
-  background: -webkit-linear-gradient(bottom, #9356DC, #FF79DA);
-  background: -moz-linear-gradient(bottom, #9356DC, #FF79DA);
-  background: -o-linear-gradient(bottom, #9356DC, #FF79DA);
-  background: linear-gradient(bottom, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(bottom, #FF79DA, #FF79DA);
+  background: -moz-linear-gradient(bottom, #FF79DA, #FF79DA);
+  background: -o-linear-gradient(bottom, #FF79DA, #FF79DA);
+  background: linear-gradient(bottom, #FF79DA, #FF79DA);
+}
+
+@media screen and (min-width: 800px) {
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurant h1 {
+    width: 100%;
+  }
+  .restaurant article {
+    width: calc(25% - 15px);
+    margin-right: 15px;
+  }
+  .restaurant article:last-child {
+    margin-right: 0;
+  }
 }
 
 .article {
+  grid-area: article;
   background: #fff;
 }
 .article .article-bloc-img {
@@ -435,10 +455,6 @@ header {
   align-items: center;
 }
 
-.header-page--back {
-  font-size: 1.25rem;
-}
-
 .logo {
   width: 170px;
   height: auto;
@@ -462,19 +478,43 @@ footer .logo {
     padding: 30px;
   }
 }
+@media screen and (min-width: 800px) {
+  .head-intro--home {
+    background: url(/img/home-800.jpg) no-repeat rgba(94, 80, 114, 0.274);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+  }
+  .head-intro--home p, .head-intro--home h1 {
+    color: #fff;
+  }
+}
 .head-intro--page .img-ratio {
   max-height: 250px;
+}
+
+.header-page--back {
+  font-size: 1.25rem;
 }
 
 .section-padding {
   padding: 10% 6.25%;
 }
 
+@media screen and (min-width: 800px) {
+  .list-number ul {
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
 .list-number--item, .list-menu--item {
   border-radius: 20px;
   padding: 5%;
   min-height: 35px;
-  min-width: 250px;
+  cursor: pointer;
 }
 .list-number--item > span, .list-menu--item > span {
   margin-left: -54px;
@@ -498,39 +538,74 @@ footer .logo {
 .list-menu {
   padding-top: 1%;
 }
+@media screen and (min-width: 800px) {
+  .content-page .list-menu ul {
+    width: 45%;
+  }
+  .content-page .list-menu.entree {
+    background-image: url(/img/entree.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45% auto;
+  }
+  .content-page .list-menu.plat {
+    background-image: url(/img/plat.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45% auto;
+  }
+  .content-page .list-menu.dessert {
+    clear: both;
+    background-image: url(/img/dessert.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 45% auto;
+  }
+}
 .list-menu--item {
-  display: grid;
+  display: flex;
   text-align: left;
-  grid-template-columns: 100% 0%;
   background: #fff;
   padding: 0;
   overflow: hidden;
 }
-.list-menu--item > div {
-  display: grid;
-  text-align: left;
-  padding: 15px;
+.list-menu--item .content-menu {
   text-overflow: ellipsis;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+.list-menu--item .content-menu div, .list-menu--item .content-menu p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+  padding-bottom: 5px;
+}
+.list-menu--item .price {
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
 }
 .list-menu--item .check {
   background: #99E2D0;
   padding: 0;
   text-align: center;
-  height: 100%;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 0;
   opacity: 0;
 }
 .list-menu--item .check i {
   color: #fff;
   padding: 0;
 }
-.list-menu--item:active {
-  grid-template-columns: 85% 15%;
-}
 .list-menu--item:active .check {
   opacity: 1;
+  width: 50px;
 }
 .list-menu--item > span {
   margin-left: 0;
@@ -570,6 +645,7 @@ footer ul span {
   position: relative;
   z-index: 9;
   text-align: left;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
