@@ -208,6 +208,7 @@
                 justify-content: center;
                 width:0;
                 opacity: 0;
+                transition: width 850ms ease-out;
                 i{
                    color:$white;
                    padding: 0;
