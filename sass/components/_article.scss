@@ -1,25 +1,21 @@
 .restaurant{
-    @include bp(md){
-      display:flex;
-      flex-direction: row;
-      flex-wrap: wrap;
 
-        h1 {
-            width: 100%;  
-      
-           
-        }
+    @include bp(md){
+        display:flex;
+   
 
         article{
-            width: calc(25% - #{$gap-fix});
+            
             margin-right:$gap-fix;
             &:last-child{
                 margin-right:0;
             }
         }
+
+        }
     }
 
-}
+
 
 .article{ 
     grid-area:article;

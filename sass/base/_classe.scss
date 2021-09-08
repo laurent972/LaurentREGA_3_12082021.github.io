@@ -66,9 +66,11 @@
 
 .button-box-shadow{
     @include button-box-shadow;
+    transition:all 850ms ease-in-out;
 
     &:hover{
-        @include button-box-shadow(5px,12px,$colour-shadow,10%);
+        transition:all 350ms ease-in-out;
+        @include button-box-shadow(5px,12px,$colour-shadow,15%);
     }
 }
 

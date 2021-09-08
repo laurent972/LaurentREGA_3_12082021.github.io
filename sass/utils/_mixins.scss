@@ -138,3 +138,126 @@ $breakpoints: (
         }
     }
 }
+
+
+@mixin slidein($translateStart:-100px, $opacityStart:0, $tanslateInter:150px, $translateEnd:300px, $opacityEnd:0){
+    @keyframes slidein{
+        0%{
+         
+            transform:translateX($translateStart) scale(1);
+            opacity: $opacityStart;
+            transition: transform 330ms ease-in-out ;
+        }
+
+       30%, 50%, 80%{
+            transform:translateX($tanslateInter) scale(1.2);
+            opacity: 1; 
+        }
+
+        100%{
+            transform:translateX($translateEnd) scale(1);
+            opacity: 0;
+        }
+    }
+}
+
+
+@mixin rotation(){
+    @keyframes rotation{
+        0%{
+            transform:rotate(0deg);
+        }
+
+        25%{
+            transform:rotate(180deg);
+        }
+  
+        75%{
+            transform:rotate(250deg);
+        }
+
+        100%{
+            transform:rotate(360deg);
+        }
+        
+    }
+}
+
+@mixin pulse(){
+    @keyframes pulse{
+        0%{
+            opacity: 0.25;
+        }
+
+        25%{
+            opacity: 0.5;
+        }
+  
+        75%{
+            opacity: 0.35;
+        }
+
+        100%{
+            opacity: 0.2;
+        }
+        
+    }
+}
+
+@mixin opacity(){
+    @keyframes opacity{
+        0%{
+            visibility:visible;
+            opacity: 1;
+        }
+
+        80%{
+            opacity: 1;
+        }
+
+        95%{
+            opacity: 0.5;
+        }
+
+        100%{
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+    }
+}
+
+@mixin displaying-menu($translate:150px){
+    opacity: 0;
+    @keyframes displaying-menu{
+        0%{
+            transform: translateY($translate);
+            opacity: 0;
+        }
+
+        80%{
+            opacity: 0.8;
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@mixin rotationclick($translate:150px){
+ 
+    @keyframes rotationclick{
+        0%{
+            transform: rotate(-360deg);
+            opacity: 0;
+        }
+
+
+        100%{
+           
+            transform: rotate(0deg);
+        }
+    }
+}
