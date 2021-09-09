@@ -8,6 +8,10 @@
     color: $font-color;
 }
 
+footer a{
+    color:$white;
+}
+
 .font{
     @extend %font-global;
     &-xsmall{

@@ -69,6 +69,10 @@ body, h1, h2, h3, .font {
   color: #333333;
 }
 
+footer a {
+  color: #fff;
+}
+
 .font-xsmall {
   font-size: 0.8rem;
 }
