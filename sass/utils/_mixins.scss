@@ -228,7 +228,7 @@ $breakpoints: (
 }
 
 @mixin displaying-menu($translate:150px){
-    opacity: 0;
+    
     @keyframes displaying-menu{
         0%{
             transform: translateY($translate);
