@@ -1,5 +1,7 @@
+@import "../utils/mixins";
 
-    .logo{
+
+.logo{
         width: 170px;
         height: auto;
         padding:$gap-fix 0;
@@ -113,31 +115,7 @@
         padding-top:1%;
 
 
-        li{         
-            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-            animation: displaying-menu 2s;
-
-             &:nth-child(1){
-                animation-delay: 0s;
-                
-             }
-
-             &:nth-child(2){
-                animation-delay: 250ms;
-                
-             }
-          
-             &:nth-child(3){
-                animation-delay: 500ms;
-                
-             }
-             &:nth-child(4){
-                @include displaying-menu(800px);
-                animation-delay: 850ms;
-               
-             }
-        }
-
+      
         .content-page &{
             @include bp(md){
                 ul{
@@ -174,6 +152,33 @@
             background:$white;
             padding: 0;
             overflow: hidden;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation: displaying-menu 2s ;
+          
+
+             &:nth-child(1){
+                //animation-delay: 0s;
+                animation-duration: 1s;
+                
+             }
+
+             &:nth-child(2){
+               // animation-delay: 250ms;
+               animation-duration: 1.25s;
+                
+             }
+          
+             &:nth-child(3){
+               // animation-delay: 500ms;
+               animation-duration: 1.55s;
+                
+             }
+             &:nth-child(4){
+                @include displaying-menu(800px);
+               // animation-delay: 850ms;
+               animation-duration: 1.95s;
+               
+             }
          
             .content-menu{
                 text-overflow: ellipsis;
