@@ -34,7 +34,7 @@
           }
 
           @include bp(md) {
-            background: url(/img/home-800.jpg) no-repeat rgba(94, 80, 114, 0.274);
+            background: url(../img/home-800.jpg) no-repeat rgba(94, 80, 114, 0.274);
             background-attachment:fixed;
             background-size: cover;
             background-blend-mode: darken;
@@ -123,21 +123,21 @@
                 }
 
                 &.entree{
-                    background-image:url(/img/entree.jpg);
+                    background-image:url(../img/entree.jpg);
                     background-repeat:  no-repeat;
                     background-position: right center;
                     background-size: 45% auto;
                 }
                 &.plat{
             
-                    background-image:url(/img/plat.jpg);
+                    background-image:url(../img/plat.jpg);
                     background-repeat:  no-repeat;
                     background-position: right center;
                     background-size: 45% auto;
                 }
                 &.dessert{
                     clear: both;
-                    background-image:url(/img/dessert.jpg);
+                    background-image:url(../img/dessert.jpg);
                     background-repeat:  no-repeat;
                     background-position: right center;
                     background-size: 45% auto;
