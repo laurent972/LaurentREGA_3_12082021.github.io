@@ -1,5 +1,5 @@
 %btn {
-    @include gradient-principal(bottom,$colour-primary,$colour-secondary);
+    @include gradient-principal(to bottom,$colour-primary,$colour-secondary);
     display: inline-block;
     padding: $gap-fix $gap-fix*2;
     color:$white;
@@ -14,7 +14,7 @@
 
         &:hover{
             
-            @include gradient-principal(bottom,$colour-secondary,$colour-secondary);
+            @include gradient-principal(to bottom,$colour-secondary,$colour-secondary);
         }
 }
 

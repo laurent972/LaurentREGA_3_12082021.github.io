@@ -72,7 +72,7 @@
 
 @mixin content-font-button{
     @include font-small;
-    font-weight:$font-regular;
+    font-weight:$font-w-normal;
     @include bp(sm) {
         @include font-regular;
         }
@@ -81,7 +81,7 @@
 
 
 //direction: top bottom left right
-@mixin gradient-principal($direction:bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
+@mixin gradient-principal($direction:to bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
     background: -webkit-linear-gradient($direction, $color1, $color2);
     background: -moz-linear-gradient($direction, $color1, $color2);
     background: -o-linear-gradient($direction, $color1, $color2);
@@ -89,7 +89,7 @@
   }
 
 
-@mixin gradient-principal-text($direction:bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
+@mixin gradient-principal-text($direction:to bottom, $color1:$colour-primary, $color2:$colour-secondary) { 
     background: -webkit-linear-gradient($direction, $color1, $color2);
     background: -moz-linear-gradient($direction, $color1, $color2);
     background: -o-linear-gradient($direction, $color1, $color2);
@@ -122,13 +122,14 @@
 }
 
 
-// Map des breakpoints
+
+
 $breakpoints: (
   sm: 576px,
   md: 800px,
   lg: 992px,
 );
-// Mixin pour appeler les breakpoint facilement
+
 @mixin bp($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         $value: map-get($breakpoints, $breakpoint);

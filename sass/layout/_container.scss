@@ -94,6 +94,12 @@
             i{
                 color:lighten($black,50%)
             }
+            &:hover{
+                i{
+                    color: $colour-primary;
+                }
+               
+            }
         }
 
         .count{
@@ -190,7 +196,7 @@
              
             }
             .price{
-                padding: $gap-fix;
+                padding:18px $gap-fix 0;
                 display: flex;
                 align-items: flex-end;
             
